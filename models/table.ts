@@ -1,12 +1,12 @@
-import face1 from "@/public/faces/2.png";
+import png from "@/public/faces/1.png";
 
 export default class tableData {
   constructor(
     public id: number,
-    public image: typeof face1,
+    public image: typeof png,
     public name: string,
     public amount: number,
-    public date: string,
+    public date: Date,
     public status: "Paid" | "Refund"
   ) {}
 }
