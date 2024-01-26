@@ -13,13 +13,13 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export function DatePickerDemo({Trigger}:{Trigger:React.FC}) {
+export function DatePicker({trigger}:{trigger:React.ReactNode}) {
   const [date, setDate] = React.useState<Date>();
 
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Trigger/>
+        {trigger}
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0" align="start">
         <Calendar

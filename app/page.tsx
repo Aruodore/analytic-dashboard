@@ -8,16 +8,16 @@ import { SalesTrends } from "@/components/sales-trends";
 
 export default function Home() {
   return (
-    <main className="flex">
+    <main className="md:flex">
       <SideBarMenu />
-      <div className="grow">
+      <div className="md:grow">
         <Header />
         <div className="p-5 bg-[#FAFAFA] space-y-5">
-          <Grid>
-            <SalesTrends/>
+          <Grid className="max-md:flex max-md:flex-col">
+            <SalesTrends />
             <Summary />
           </Grid>
-          <Grid>
+          <Grid className="max-md:flex max-md:flex-col">
             <LastOrders />
             <TopPlateforms />
           </Grid>

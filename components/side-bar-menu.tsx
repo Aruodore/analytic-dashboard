@@ -18,8 +18,8 @@ const NAV2 = [arrowRight, setting, logout];
 
 export const SideBarMenu = () => {
   return (
-    <div className="w-20">
-      <div className="flex flex-col py-5 justify-between gap-y-48 bg-[#F7F8FA] border border-[#EBECF2] ">
+    <div className="w-20 max-md:hidden">
+      <div className="flex flex-col py-5 justify-between sticky top-0 max-lg:max-h-screen max-lg:h-full  lg:gap-y-48 bg-[#F7F8FA] border border-[#EBECF2] ">
         <div className="w-full">
           <div className="flex justify-center mb-5">
             <span className="w-10 h-10 flex justify-center items-center">
