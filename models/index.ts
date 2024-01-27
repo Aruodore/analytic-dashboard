@@ -1,7 +1,7 @@
 import bulk from "@/public/icons/3d-rotate.svg";
 import png from "@/public/faces/1.png";
 
-export  class tableData {
+export  class TableData {
   constructor(
     public id: number,
     public image: typeof png,

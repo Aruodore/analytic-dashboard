@@ -17,13 +17,17 @@ export function SortSelect({ trigger, getValue }: { trigger: React.ReactNode, ge
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger >
-        { trigger }
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuTrigger>{trigger}</DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56 dark:bg-[#171717]">
         <DropdownMenuLabel>Sort By</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={position} onValueChange={(value) => { setPosition(value); getValue(value) }}>
+        <DropdownMenuRadioGroup
+          value={position}
+          onValueChange={(value) => {
+            setPosition(value);
+            getValue(value);
+          }}
+        >
           <DropdownMenuRadioItem value="Daily">Daily</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="Weekly">Weekly</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="Monthly">Monthly</DropdownMenuRadioItem>

@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { Card } from "@/components/ui/card";
-import documentDownload from "@/public/icons/document-download.svg";
 
 class DataPlateform {
   constructor(
@@ -40,7 +38,7 @@ export const TopPlateforms = () => {
                   style={{ background: data.color, width: data.percent + "%" }}
                 ></span>
               </span>
-              <div className="flex justify-between text-[#525252] dark:text-white font-jakarta text-[1.125rem] leading-[1.625rem] ">
+              <div className="flex justify-between text-[#525252] dark:text-white font-jakarta text-base md:text-[1.125rem] leading-[1.625rem] ">
                 <p>${data.amount.toLocaleString()}</p>
                 <p>+{data.increase}%</p>
               </div>

@@ -2,8 +2,7 @@ import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { TABLE_DATA } from "@/data/table";
 
-import documentDownload from "@/public/icons/document-download.svg";
-import { DocumentDownload } from "./ui/icons/document-download";
+import { OrderDetails } from "./ui/modal";
 
 
 export const LastOrders = () => {
@@ -17,7 +16,7 @@ export const LastOrders = () => {
           <p className="font-medium text-[#34CAA5]">See All</p>
         </div>
         <div className=" overflow-x-auto w-full">
-          <table className="font-jarkata text-base font-normal leading-6  w-[45rem] lg:w-full">
+          <table className="font-jarkata text-sm md:text-base font-normal leading-6  min-w-[45rem] w-full">
             <thead className="text-[#9CA4AB] font-medium text-start pb-5 ">
               <tr className="[&>th]:text-left [&>th]:font-medium  [&>th]:pt-3 [&>th]:pb-4 [&>th]:border-b">
                 <th>Name</th>
@@ -31,7 +30,7 @@ export const LastOrders = () => {
               {TABLE_DATA.map((data) => (
                 <tr className="[&>td]:pt-3 [&>td]:pb-4 " key={data.id}>
                   <td className="">
-                    <div className="flex items-center gap-x-[0.625rem] font-medium text-[#3A3F51]">
+                    <div className="flex items-center gap-x-[0.625rem] font-medium dark:text-white text-[#3A3F51]">
                       <div>
                         <Image
                           {...data.image}
@@ -56,10 +55,10 @@ export const LastOrders = () => {
                     <span>{data.status}</span>
                   </td>
                   <td>
-                    <div className="flex gap-[0.37rem] items-center dark:text-white text-[#0D062D]">
-                      <DocumentDownload className="dark:text-white" />
-                      <span>View</span>
-                    </div>
+                    <OrderDetails
+                      key={data.name}
+                      data={{...data}}
+                    />
                   </td>
                 </tr>
               ))}

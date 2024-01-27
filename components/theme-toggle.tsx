@@ -16,26 +16,25 @@ export const ThemeToggle = () => {
         className="flex flex-col items-center gap-4 z-10 "
         onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
       >
-        <div className="text-[1.875rem] aspect-square rounded-full flex items-center justify-center p-[0.4rem]">
-          <Image alt="" src={brightness} />
+        <div className="text-[1.875rem] aspect-square rounded-full  flex items-center justify-center p-[0.4rem]">
+          <Image alt="" src={brightness} className="z-[2]" />
+          {currentTheme == "light" && (
+            <motion.span
+              layoutId="lan"
+              className="aspect-square rounded-full z-[1] m-2 bg-[#34CAA5] absolute top-0 dark:bottom-0 left-0 w-[1.875rem] "
+            />
+          )}
         </div>
-        {currentTheme == "light" && (
-          <motion.span
-            layoutId="lan"
-            className="aspect-square rounded-full m-2 bg-[#34CAA5] absolute top-0 dark:bottom-0 left-0 w-[1.875rem] "
-          />
-        )}
-        <div>
-          <Image alt="" src={moon} />
+        <div className="flex items-center justify-center">
+          <Image alt="" src={moon} className="z-[2]" />
+          {currentTheme == "dark" && (
+            <motion.span
+              layoutId="lan"
+              className="aspect-square rounded-full m-2 z-[1] bg-[#34CAA5] absolute bottom-0 dark:bottom-0 left-0 w-[1.875rem] "
+            />
+          )}
         </div>
-        {currentTheme == "dark" && (
-          <motion.span
-            layoutId="lan"
-            className="aspect-square rounded-full m-2 bg-[#34CAA5] absolute bottom-0 dark:bottom-0 left-0 w-[1.875rem] "
-          />
-        )}
       </div>
-      {/* <span className="aspect-square rounded-full m-2 bg-[#34CAA5] absolute top-0 dark:bottom-0 left-0 w-[1.875rem] "></span> */}
     </div>
   );
 };
