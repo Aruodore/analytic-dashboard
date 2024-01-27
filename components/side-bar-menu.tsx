@@ -28,7 +28,7 @@ export const SideBarMenu = () => {
     <>
       <Dialog>
         <DialogTrigger>
-          <DialogOverlay onClick={()=>setShown(false)} />
+          <DialogOverlay onClick={() => setShown(false)} />
           <button
             className={`fixed top-8 md:hidden left-4 z-20 transition-transform`}
             onClick={() => setShown(!shown)}
@@ -38,16 +38,16 @@ export const SideBarMenu = () => {
         </DialogTrigger>
       </Dialog>
       <div className={`w-20  sidebar max-md:hidden ${shown && "show"} `}>
-        <div className="flex flex-col max-md:px-1 py-5 justify-between sticky top-0 z-[100] max-h-[100dvh] h-full   bg-[#F7F8FA] dark:bg-[#262626]  dark:border-[#545454] border border-[#EBECF2] ">
+        <div className="flex flex-col  py-5 justify-between sticky top-0 max-md:z-[100] max-h-[100dvh] h-full   bg-[#F7F8FA] dark:bg-[#262626]  dark:border-[#545454] border border-[#EBECF2] ">
           <div className="w-full">
-            <div className="flex justify-center mb-5">
+            <div className="flex justify-center mb-5 max-md:px-1">
               <span className="w-10 h-10 flex justify-center items-center">
                 <Image src={logo} alt="" className="w-10 h-10" />
               </span>
             </div>
             <nav className="w-full">
               <ul className="flex flex-col w-full items-stretch">
-                <li className="p-[0.625rem]">
+                <li className="p-[0.625rem] relative after:absolute after:w-[.1875rem] dark:after:bg-white after:right-0 after:top-1/2 after:-translate-y-1/2 after:h-5 after:bg-[#0D062D] after:rounded-s-full">
                   <span className="h-10 flex justify-center dark:text-white items-center w-full">
                     <Category />
                   </span>

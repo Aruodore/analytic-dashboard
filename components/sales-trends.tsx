@@ -9,7 +9,7 @@ export const SalesTrends = () => {
         <h2 className="font-semibold text-[#26282C] leading-[none] dark:text-white">Sales Trends</h2>
         <div className="flex items-center gap-2  md:gap-[0.625rem] max-sm:text-sm">
           <label htmlFor="" className="text-[#3A3F51]  dark:text-white items-center ">
-            Short by :
+            Sort by :
           </label>
           <SalesSelect />
         </div>

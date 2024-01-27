@@ -12,7 +12,7 @@ const inter  = Inter({ subsets: ["latin"], weight: ["500", '100', '400', '600', 
 export const Header = () => {
   // font-family: "Plus Jakarta Sans";
   return (
-    <header className="text-[#26282C] sticky top-0 z-10 border dark:border-[#545454] dark:text-white border-[#DADDDD] bg-white dark:bg-[#262626] font-inter ">
+    <header className="text-[#26282C] sticky top-0 z-10 border dark:border-[#545454] dark:text-white border-[#DADDDD] bg-white dark:bg-[#262626] ">
       <Grid className="py-[1.125rem] px-5 grow">
         <div className="flex items-center justify-between">
           <h1 className="text-[1.25rem] font-semibold leading-[1.75rem] max-bm:hidden">
