@@ -34,7 +34,7 @@ export const SideBarMenu = () => {
       >
         <IoIosMenu size={28} />
       </button>
-      <div className={`w-20  sidebar max-md:hidden ${shown && "show"} `}>
+      <div className={`w-20  sidebar max-md:hidden ${shown && "show"} grow`} >
         <div className="flex flex-col max-md:px-1 py-5 justify-between sticky top-0 max-h-[100dvh] h-full   bg-[#F7F8FA] dark:bg-[#262626]  dark:border-[#545454] border border-[#EBECF2] ">
           <div className="w-full">
             <div className="flex justify-center mb-5">
