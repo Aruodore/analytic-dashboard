@@ -1,5 +1,5 @@
 import Image from "next/image";
-import search from "@/public/imgs/search.png";
+import { Search } from "@/components/ui/icons/search";
 import { Account } from "@/components/account";
 import  {SearchBar} from '@/components/search-bar'
 import {
@@ -15,7 +15,7 @@ export const MobileNav = () => {
       <Popover>
         <PopoverTrigger>
           <div className="p-[11px] rounded-full border bm:hidden border-[#DADDDD] ">
-            <Image src={search} alt="" />
+            <Search />
           </div>
         </PopoverTrigger>
         <PopoverContent className="bm:hidden p-0 rounded-full w-full border-none"><SearchBar className={'max-bm:flex'}/></PopoverContent>
