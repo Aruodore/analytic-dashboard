@@ -6,6 +6,12 @@ import { DataSummary } from "@/models";
 
 import downArrow from "@/public/charts/3.png";
 import upArrow from "@/public/charts/4.png";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["500", "100", "400", "600", "700", "300", "200"],
+});
 
 export const SummaryItem= ({data}:{data:DataSummary}) => {
     return (
@@ -39,7 +45,7 @@ export const SummaryItem= ({data}:{data:DataSummary}) => {
             />
             <span>{data.percent}%</span>
           </div>
-          <p className="text-[#606060] dark:text-white text-[.875rem] leading-none font-inter ">
+          <p className={"text-[#606060] dark:text-white text-[.875rem] leading-none "+inter.className}>
             vs. previous month
           </p>
         </div>

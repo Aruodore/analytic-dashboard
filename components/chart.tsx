@@ -113,12 +113,12 @@ export const Chart = () => {
           <td key={i}></td>
         ))}
       </tr>
-      <tr className="border-y border-dashed border-[#EAEAEA] ">
+      <tr className="border-t border-dashed border-[#EAEAEA] ">
         {Array.from(new Array(12)).map((el, i) => (
           <td key={i}></td>
         ))}
       </tr>
-      <tr className="[&>td]:pt-3 [&>td]:w-fit [&>td]:pl-1 dark:text-white text-[#525252]  [&>td:not(:last-child)]:pr-[1.675rem] leading-[1.375rem]">
+      <tr className="[&>td]:pt-3 [&>td]:w-fit [&>td]:pl-1 [&>td]:border-t [&>td]:border-dashed [&>td]:border-[#EAEAEA] dark:text-white text-[#525252]  [&>td:not(:last-child)]:pr-[1.675rem] leading-[1.375rem]">
         <td></td>
         {months.map(({ name, height, label }, i) => (
           <td key={i} className="relative">
