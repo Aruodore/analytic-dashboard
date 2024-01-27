@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 
 import { IoIosMenu } from "react-icons/io";
@@ -16,26 +16,29 @@ import setting from "@/public/icons/setting-2.png";
 import logout from "@/public/icons/logout.png";
 import { useState } from "react";
 import { Category } from "./ui/icons/category";
+import {Dialog, DialogOverlay, DialogTrigger } from "./ui/dialog";
 
-const NAV = [ trendUp, profile, discount, info];
+const NAV = [trendUp, profile, discount, info];
 const NAV2 = [arrowRight, setting, logout];
 
 export const SideBarMenu = () => {
-
-  const  [shown, setShown] = useState(false)
+  const [shown, setShown] = useState(false);
 
   return (
     <>
-      <button
-        className={`fixed top-8 md:hidden left-4 z-20 transition-transform ${
-          shown ? "translate-x-12" : ""
-        } `}
-        onClick={() => setShown(!shown)}
-      >
-        <IoIosMenu size={28} />
-      </button>
-      <div className={`w-20  sidebar max-md:hidden ${shown && "show"} grow`} >
-        <div className="flex flex-col max-md:px-1 py-5 justify-between sticky top-0 max-h-[100dvh] h-full   bg-[#F7F8FA] dark:bg-[#262626]  dark:border-[#545454] border border-[#EBECF2] ">
+      <Dialog>
+        <DialogTrigger>
+          <DialogOverlay onClick={()=>setShown(false)} />
+          <button
+            className={`fixed top-8 md:hidden left-4 z-20 transition-transform`}
+            onClick={() => setShown(!shown)}
+          >
+            <IoIosMenu size={28} />
+          </button>
+        </DialogTrigger>
+      </Dialog>
+      <div className={`w-20  sidebar max-md:hidden ${shown && "show"} `}>
+        <div className="flex flex-col max-md:px-1 py-5 justify-between sticky top-0 z-[100] max-h-[100dvh] h-full   bg-[#F7F8FA] dark:bg-[#262626]  dark:border-[#545454] border border-[#EBECF2] ">
           <div className="w-full">
             <div className="flex justify-center mb-5">
               <span className="w-10 h-10 flex justify-center items-center">

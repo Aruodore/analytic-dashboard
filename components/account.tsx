@@ -5,6 +5,7 @@ import arrow from "@/public/icons/arrow.svg";
 import { AccountDropDown } from "./ui/account-dropdown";
 import { ArrowDown } from "./ui/icons/arrow-down";
 
+
 export const Account = () => {
   return (
     <AccountDropDown trigger={ <Trigger/> } />
