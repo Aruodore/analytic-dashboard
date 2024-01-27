@@ -67,7 +67,10 @@ export const Chart = () => {
   return (
     <table className="w-full  text-xs font-semibold">
       <tr>
-        <th rowSpan={9} className=" sticky left-0  ">
+        <th
+          rowSpan={9}
+          className=" sticky left-0 "
+        >
           <ul className="flex flex-col justify-between gap-y-8 pr-9 dark:text-white text-[#525252] ">
             <li>50.00</li>
             <li>40.00</li>
@@ -77,6 +80,9 @@ export const Chart = () => {
             <li>0.00</li>
           </ul>
         </th>
+        {Array.from(new Array(12)).map((el, i) => (
+          <th key={i} className="border-y border-[#EAEAEA] border-dashed"></th>
+        ))}
       </tr>
       {}
       <tr className="border-y border-dashed border-[#EAEAEA] ">
