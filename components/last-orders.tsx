@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { TABLE_DATA } from "@/data/table";
 
 import documentDownload from "@/public/icons/document-download.svg";
+import { DocumentDownload } from "./ui/icons/document-download";
 
 
 export const LastOrders = () => {
@@ -10,7 +11,9 @@ export const LastOrders = () => {
     <Card className="self-start w-full">
       <div className="w-full overflow-x-auto">
         <div className="flex justify-between text-[1.125rem] font-jakarta leading-[1.635rem] mb-[0.875rem]">
-          <h2 className="font-semibold text-[#26282C]">Last Orders</h2>
+          <h2 className="font-semibold text-[#26282C] dark:text-white">
+            Last Orders
+          </h2>
           <p className="font-medium text-[#34CAA5]">See All</p>
         </div>
         <div className=" overflow-x-auto w-full">
@@ -53,8 +56,8 @@ export const LastOrders = () => {
                     <span>{data.status}</span>
                   </td>
                   <td>
-                    <div className="flex gap-[0.37rem] items-center text-[#0D062D]">
-                      <Image src={documentDownload} alt="download icon" />
+                    <div className="flex gap-[0.37rem] items-center dark:text-white text-[#0D062D]">
+                      <DocumentDownload className="dark:text-white" />
                       <span>View</span>
                     </div>
                   </td>

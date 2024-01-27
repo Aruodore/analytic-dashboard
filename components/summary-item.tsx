@@ -17,12 +17,12 @@ export const SummaryItem= ({data}:{data:DataSummary}) => {
           <Image src={data.chart} alt="" />
         </div>
         <div>
-          <p className="text-[1.125rem] text-[#898989] font-medium leading-[1.635rem] ">
+          <p className="text-[1.125rem] text-[#898989] font-medium leading-[1.635rem]  dark:text-white">
             {data.name}
           </p>
           <h3 className="font-semibold text-2xl ">{data.amount}</h3>
         </div>
-        <div className="flex">
+        <div className="flex justify-between items-center">
           <div
             style={{
               color: data.financial === "profit" ? "#34CAA5" : "#ED544E",
@@ -36,10 +36,12 @@ export const SummaryItem= ({data}:{data:DataSummary}) => {
             <Image
               src={data.financial === "profit" ? upArrow : downArrow}
               alt=""
-            />{" "}
+            />
             <span>{data.percent}%</span>
           </div>
-          <p>vs. previous month</p>
+          <p className="text-[#606060] dark:text-white text-[.875rem] leading-none font-inter ">
+            vs. previous month
+          </p>
         </div>
       </Card>
     );

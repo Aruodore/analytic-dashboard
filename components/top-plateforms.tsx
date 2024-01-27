@@ -24,18 +24,23 @@ export const TopPlateforms = () => {
   return (
     <Card className="">
       <div className="flex justify-between text-[1.125rem] font-jakarta leading-[1.635rem] mb-[0.875rem]">
-        <h2 className="font-semibold text-[#26282C]">Top Platform</h2>
+        <h2 className="font-semibold text-[#26282C]  dark:text-white">
+          Top Platform
+        </h2>
         <p className="font-medium text-[#34CAA5]">See All</p>
       </div>
       <div>
-        <ul className="space-y-5">
+        <ul className="space-y-4 md:space-y-5">
           {PLATEFORM_DATA.map((data) => (
-            <li className="space-y-4" key={data.id}>
-              <h2 className="font-semibold text-[#26282C]">{data.name}</h2>
-              <span className="inline-block h-3 rounded-full bg-[#F5F5F5] w-full">
-                <span className="h-full block rounded-full" style={{background: data.color, width:data.percent+'%'}}></span>
+            <li className="space-y-3 md:space-y-4" key={data.id}>
+              <h2 className="font-semibold text-[#26282C] dark:text-white">{data.name}</h2>
+              <span className="inline-block h-3 rounded-full dark:bg-[#262626] bg-[#F5F5F5] w-full">
+                <span
+                  className="h-full block rounded-full"
+                  style={{ background: data.color, width: data.percent + "%" }}
+                ></span>
               </span>
-              <div className="flex justify-between text-[#525252] font-jakarta text-[1.125rem] leading-[1.625rem] ">
+              <div className="flex justify-between text-[#525252] dark:text-white font-jakarta text-[1.125rem] leading-[1.625rem] ">
                 <p>${data.amount.toLocaleString()}</p>
                 <p>+{data.increase}%</p>
               </div>

@@ -68,7 +68,7 @@ export const Chart = () => {
     <table className="w-full overflow-x-auto text-xs font-semibold">
       <tr>
         <th rowSpan={9} className=" sticky left-0  ">
-          <ul className="flex flex-col justify-between gap-y-8 pr-9 text-[#525252] bg-white">
+          <ul className="flex flex-col justify-between gap-y-8 pr-9 dark:text-white text-[#525252] ">
             <li>50.00</li>
             <li>40.00</li>
             <li>30.00</li>
@@ -118,7 +118,7 @@ export const Chart = () => {
           <td key={i}></td>
         ))}
       </tr>
-      <tr className="[&>td]:pt-3 [&>td]:w-fit [&>td]:pl-1 text-[#525252]  [&>td:not(:last-child)]:pr-[1.875rem] leading-[1.375rem]">
+      <tr className="[&>td]:pt-3 [&>td]:w-fit [&>td]:pl-1 dark:text-white text-[#525252]  [&>td:not(:last-child)]:pr-[1.875rem] leading-[1.375rem]">
         <td></td>
         {months.map(({ name, height, label }, i) => (
           <td key={i} className="relative">

@@ -2,18 +2,26 @@ import Image from "next/image";
 
 import face from "@/public/faces/1.png";
 import arrow from "@/public/icons/arrow.svg";
+import { AccountDropDown } from "./ui/account-dropdown";
+import { ArrowDown } from "./ui/icons/arrow-down";
 
 export const Account = () => {
   return (
-    <div className="lg:border lg:border-[#DADDDD] rounded-full lg:px-2 lg:py-[0.375rem] flex items-center gap-2">
-      <Image {...face  } alt="face" className="rounded-full " />
-      <div className="gap-3 hidden lg:flex">
-        <div className="text-right text-[#26282C]  ">
-          <h2>Justin Bergson</h2>
-          <p className="font-[0.875rem] text-[#787486]">Justin@gmail.com</p>
+    <AccountDropDown trigger={ <Trigger/> } />
+  );
+};
+
+const Trigger = () => {
+  return (
+    <div className="border border-[#DADDDD] rounded-full px-2 py-[0.375rem] flex items-center gap-2">
+      <Image {...face} alt="face" className="rounded-full " />
+      <div className="lg:gap-3 flex items-center">
+        <div className="text-right text-[#26282C] dark:text-white max-lg:hidden flex flex-col gap-[.2rem]  ">
+          <h2 className='leading-none'>Justin Bergson</h2>
+          <p className="font-[0.875rem] text-[#787486] leading-none">Justin@gmail.com</p>
         </div>
-        <Image width={20} height={20} alt='arrow' src={arrow}/>
+        <ArrowDown/>
       </div>
     </div>
   );
-};
+}
