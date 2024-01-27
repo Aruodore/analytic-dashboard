@@ -34,7 +34,7 @@ export const Header = () => {
             }
           >
             <Calendar />
-            <span>November 15, 2023</span>
+            <span className="text-nowrap">November 15, 2023</span>
           </div>
           <div className="p-[11px] rounded-full border border-[#DADDDD]">
             <Bell/>
